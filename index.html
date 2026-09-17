@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ember Gallery</title>
+<link rel="stylesheet" href="app.css">
+</head>
+<body>
+
+<canvas id="fireCanvas"></canvas>
+
+<div class="lock-screen" id="lockScreen">
+  <div class="lock-box">
+    <div class="flame-icon">🔥</div>
+    <h1 class="lock-title">Ember Gallery</h1>
+    <p class="lock-sub">Enter the password to unlock the gallery</p>
+    <form class="lock-form" id="lockForm" autocomplete="off">
+      <input type="password" class="lock-input" id="passwordInput" placeholder="Password" autocomplete="new-password">
+      <button type="submit" class="lock-btn">Unlock</button>
+    </form>
+    <p class="lock-error" id="lockError"></p>
+  </div>
+</div>
+
+<div class="app" id="app">
+  <header class="header">
+    <h1 class="logo">Ember Gallery</h1>
+    <div class="header-actions">
+      <label class="upload-btn">
+        <span class="upload-icon">+</span>
+        <span>Upload Images</span>
+        <input type="file" id="fileInput" accept="image/*" multiple hidden>
+      </label>
+      <button class="ghost-btn" id="lockBtn">Lock</button>
+    </div>
+  </header>
+
+  <main class="main">
+    <div class="empty-state" id="emptyState">
+      <div class="empty-icon">🔥</div>
+      <h2>Your gallery is empty</h2>
+      <p>Drop images anywhere on the page or use the upload button.</p>
+    </div>
+    <div class="gallery" id="gallery"></div>
+  </main>
+</div>
+
+<div class="lightbox" id="lightbox">
+  <button class="lb-close" id="lbClose">&times;</button>
+  <button class="lb-nav lb-prev" id="lbPrev">&#10094;</button>
+  <img class="lb-img" id="lbImg" alt="">
+  <button class="lb-nav lb-next" id="lbNext">&#10095;</button>
+  <div class="lb-counter" id="lbCounter"></div>
+</div>
+
+<div class="drop-hint" id="dropHint">Drop images to add them</div>
+
+<div class="toast" id="toast"></div>
+
+<script src="app.js"></script>
+</body>
+</html>
