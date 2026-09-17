@@ -1,4 +1,4 @@
-const API_URL = 'http://51.83.6.7:20229';
+const API_URL = 'https://broker-browsing-practice-urls.trycloudflare.com';
 const PASSWORD = 'fire123';
 
 const lockScreen = document.getElementById('lockScreen');
