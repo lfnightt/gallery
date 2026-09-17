@@ -1,4 +1,4 @@
-const API_URL = 'http://localhost:3000';
+const API_URL = 'http://51.83.6.7:20229';
 const PASSWORD = 'fire123';
 
 const lockScreen = document.getElementById('lockScreen');
